@@ -37,10 +37,19 @@ Apify.main(async () => {
             const matchUpadatedAt = confirmedDateText.match(/(\d+).\s+(\d+).\s+(\d+)/);
 
             if (matchUpadatedAt && matchUpadatedAt.length > 3) {
-                const dateTimeStr = `${matchUpadatedAt[3]}.${matchUpadatedAt[2]}.${matchUpadatedAt[1]}`;
-                const dateTime = moment.tz(dateTimeStr, "YYYY.MM.DD", 'Europe/Ljubljana');
-               
-                data.lastUpdatedAtSource = dateTime.toISOString();
+                //const dateTimeStr = `${matchUpadatedAt[3]}.${matchUpadatedAt[2]}.${matchUpadatedAt[1]}`;
+                //const dateTime = moment.tz(dateTimeStr, "YYYY.MM.DD", 'Europe/Ljubljana');
+                //data.lastUpdatedAtSource = dateTime.toISOString();
+
+                data.lastUpdatedAtSource = moment({
+                    year: parseInt(matchUpadatedAt[3]),
+                    month: parseInt(matchUpadatedAt[2]),
+                    date: parseInt(matchUpadatedAt[1]),
+                    hour: 0,
+                    minute: 0,
+                    second: 0,
+                    millisecond: 0
+                }).toISOString();
             } else {
                 throw new Error('lastUpdatedAtSource not found');
             }
