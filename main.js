@@ -56,7 +56,7 @@ Apify.main(async () => {
 
             const numberOfCases = $('.content-blocks').text();
             const [skip, confirmed] = numberOfCases.match(/(\d+) confirmed/);
-            data.confirmedCases = confirmed;
+            data.confirmedCases = parseInt(confirmed);
 
             // Compare and save to history
             const latest = await kvStore.getValue(LATEST) || {};
