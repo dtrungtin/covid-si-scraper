@@ -1,6 +1,6 @@
 {
-    "title": "Switzerland Federal Office of Public Health POPH COVID-19",
-    "description": "This actor scrapes data about COVID-19 from the Federal Office of Public Health POPH of Switzerland",
+    "title": "Republic Of Slovenia GOV.SI COVID-19",
+    "description": "This actor scrapes data about COVID-19 from the Republic Of Slovenia GOV.SI",
     "type": "object",
     "schemaVersion": 1,
     "properties": {},
