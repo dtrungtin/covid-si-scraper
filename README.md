@@ -1,5 +1,5 @@
 # Coronavirus stats in the Slovenia from official source
-Gets an actual number of confirmed cases by COVID-19 in the Slovenia from https://www.gov.si/en/news/2020-03-12-slovenia-declares-coronavirus-epidemic/.
+Gets an actual number of confirmed cases by COVID-19 in the Slovenia from https://www.gov.si/en/topics/coronavirus-disease-covid-19/.
 
 Latest data are available at this URL: https://api.apify.com/v2/key-value-stores/603AyvQ8QjyqmnZx6/records/LATEST?disableRedirect=true.
 
